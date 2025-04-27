@@ -12,7 +12,7 @@ body {
     background-color: #ffffff;
     overflow-x: hidden;
     overflow-y: auto;
-    font-family: 'Lato', sans-serif; /* Aplicar Lato como fuente base para todo el texto */
+    font-family: 'Lato', sans-serif; 
 }
 
 /* Aplicar Manrope a todos los títulos */
@@ -62,8 +62,8 @@ header {
     gap: 10px;
     text-decoration: none;
     position: relative;
-    top: -14px; /* Mueve hacia arriba */
-    right: -20px; /* Mueve hacia la derecha */
+    top: -14px; 
+    right: -20px; 
 }
 
 .logo img {
@@ -88,7 +88,7 @@ nav a {
     font-size: 20px;
     position: relative;
     padding: 8px 80px;
-    font-family: 'Manrope', sans-serif; /* Menú con Manrope */
+    font-family: 'Manrope', sans-serif; 
 }
 
 nav a:hover {
@@ -116,7 +116,7 @@ nav a:nth-child(4)::before {
     font-weight: bold;
     text-decoration: none;
     transition: background-color 0.3s ease;
-    font-family: 'Manrope', sans-serif; /* Botón con Manrope */
+    font-family: 'Manrope', sans-serif; 
 }
 
 .login-button:hover {
@@ -237,7 +237,7 @@ nav a:nth-child(4)::before {
     margin-top: 100px;
     font-size: 42px;
     font-style: normal;
-    font-weight: 700; /* Peso adecuado para Manrope en títulos grandes */
+    font-weight: 700; 
     line-height: normal;
 }
 
@@ -263,7 +263,7 @@ nav a:nth-child(4)::before {
     text-decoration: none;
     font-size: 20px;
     transition: background-color 0.3s ease;
-    font-family: 'Manrope', sans-serif; /* Botones con Manrope */
+    font-family: 'Manrope', sans-serif; 
 }
 
 .cta-main:hover {
@@ -319,7 +319,7 @@ nav a:nth-child(4)::before {
     position: relative;
     z-index: 1;
     color: #000;
-    font-weight: 700; /* Peso adecuado para Manrope en títulos */
+    font-weight: 700; 
 }
 
 /* Contenedor de tarjetas */
@@ -398,13 +398,12 @@ nav a:nth-child(4)::before {
     background-size: 200% 200%;
     background-position: right bottom;
     transition: background-position 0.4s ease;
-    font-family: 'Manrope', sans-serif; /* Botones con Manrope */
+    font-family: 'Manrope', sans-serif; 
 }
 
 .demo-button:hover {
     background-position: left top;
 }
-
 
 /* Estilos para la sección de Company (Former BuildWise) */
 .company-section {
@@ -412,7 +411,7 @@ nav a:nth-child(4)::before {
     background-color: #f5f1ec;
     padding: 80px;
     width: 100%;
-    overflow: hidden; /* Importante para contener la animación */
+    overflow: hidden; 
 }
   
 /* Contenedor para la animación de fondo */
@@ -423,7 +422,7 @@ nav a:nth-child(4)::before {
     width: 100%;
     height: 100%;
     z-index: 0;
-    pointer-events: none; /* Permite que los clicks pasen a través de la animación */
+    pointer-events: none; 
  }
   
   /* Asegurarse de que el canvas ocupe todo el espacio */
@@ -549,7 +548,6 @@ nav a:nth-child(4)::before {
     z-index: 2;
     width: 60%;
     padding: 20px 20px 20px 0;
-    /* Añadir un fondo semi-transparente si se desea más contraste con la animación */
     background-color: rgba(245, 241, 236, 0.7);
     border-radius: 10px;
     padding: 25px;
@@ -581,6 +579,7 @@ nav a:nth-child(4)::before {
     font-weight: bold;
     color: #2A1905;
 }
+
 
 /* Estilos para la sección de Pricing (Former Planes) */
 .pricing-section {
@@ -665,9 +664,85 @@ nav a:nth-child(4)::before {
     width: 15%;
     height: 15%;
     background-color: transparent;
-    z-index:-1;
+    z-index: -1;
+}
+ 
+/* Estilos para la sección de Preguntas Frecuentes */
+.faq-section {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+    text-align: center;
 }
 
+.faq-section h2 {
+    color: #866C52;
+    font-size: 35px;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+}
+
+.faq-question {
+    background: #A08B7A;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-question h3 {
+    margin: 0;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.toggle-icon {
+    background: #352A21;
+    color: #ffffff;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.faq-answer {
+    padding: 1.5rem;
+    line-height: 1.6;
+    display: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item.active .toggle-icon {
+    transform: rotate(45deg);
+}
 
 /* Estilos para la sección de Contacto */
 .contact-section {
@@ -753,6 +828,25 @@ nav a:nth-child(4)::before {
 .submit-button:hover {
     background: #755E48;
 }
+
+/* Estilos para la animación de hilos en la sección de contacto */
+.textile-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.25;
+    background-color: #f5f1ec;
+}
+  
+.textile-canvas canvas {
+    width: 100%;
+    height: 100%;
+}
+
+
 .site-footer {
     background-color: #2A1905;
     padding: 2rem;
@@ -785,15 +879,12 @@ nav a:nth-child(4)::before {
     filter: brightness(0) invert(1);
 }
 
-
-
-
-
-
-
-
-
-
+.copyright {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+}
 
 /* =================== */
 /*      RESPONSIVE      */
@@ -1028,7 +1119,7 @@ nav a:nth-child(4)::before {
     }
 }
 
-/* Modificaciones para responsive */
+
 @media (max-width: 992px) {
     .contact-wrapper {
       justify-content: center;
@@ -1041,9 +1132,9 @@ nav a:nth-child(4)::before {
     }
 }
 
-/* Para pantallas medianas (tablets) */
+
 @media screen and (max-width: 991px) and (min-width: 768px) {
-    /* Ajustes ya mencionados anteriormente */
+    
     .main-banner {
         height: auto;
         min-height: 100vh;
@@ -1054,16 +1145,16 @@ nav a:nth-child(4)::before {
         opacity: 0.85;
     }
     
-    /* Ajuste para menú */
+    
     nav a {
         padding: 8px 15px;
         font-size: 16px;
     }
 }
 
-/* Para móviles grandes (como iPhone Plus, Galaxy S) */
+
 @media screen and (max-width: 767px) and (min-width: 576px) {
-    /* Simplificar layout para móviles grandes */
+    
     .banner-accent {
         clip-path: polygon(40% -20%, 200% -100%, 100% 100%, 0% 20%);
         opacity: 0.8;
@@ -1095,7 +1186,7 @@ nav a:nth-child(4)::before {
         font-size: 32px;
     }
     
-    /* Menú hamburguesa */
+    
     .mobile-header {
         padding: 10px 15px;
     }
@@ -1105,11 +1196,11 @@ nav a:nth-child(4)::before {
     }
 }
 
-/* Para móviles pequeños */
+
 @media screen and (max-width: 575px) {
-    /* Layout muy simplificado para pantallas muy pequeñas */
+    
     .banner-accent {
-        display: none; /* Quitar completamente en pantallas muy pequeñas */
+        display: none; 
     }
     
     .main-banner {
@@ -1158,7 +1249,7 @@ nav a:nth-child(4)::before {
         text-align: center;
     }
     
-    /* Ajustes de header para móviles muy pequeños */
+    
     .logo img {
         height: 70px;
     }
@@ -1167,7 +1258,7 @@ nav a:nth-child(4)::before {
         padding: 10px;
     }
     
-    /* Menú ajustado para pantallas pequeñas */
+   
     .show-nav {
         width: 100%;
         right: 0;
@@ -1182,7 +1273,7 @@ nav a:nth-child(4)::before {
     }
 }
 
-/* Ajuste extremadamente pequeño (iPhone SE o similar) */
+
 @media screen and (max-width: 375px) {
     .banner-content h1 {
         font-size: 24px;
@@ -1199,15 +1290,15 @@ nav a:nth-child(4)::before {
 }
 
 
-/* Estilos mejorados para el menú hamburguesa y desplegable */
+
 @media (max-width: 992px) {
-    /* Header con fondo marrón */
+    
     header {
         background-color: #2A1905;
         padding: 12px 20px;
     }
     
-    /* Menú hamburguesa */
+    
     .menu-toggle {
         display: flex;
         flex-direction: column;
@@ -1227,13 +1318,13 @@ nav a:nth-child(4)::before {
         transition: all 0.3s ease;
     }
     
-    /* Estilo del menú desplegable - mejorado */
+
     nav.show-nav {
         display: flex;
         flex-direction: column;
         background-color: #2A1905;
         position: absolute;
-        top: 85px; /* Ajustar según la altura de tu header */
+        top: 85px; 
         left: 0;
         width: 100%;
         padding: 0;
@@ -1267,12 +1358,12 @@ nav a:nth-child(4)::before {
         background-color: rgba(255,255,255,0.05);
     }
     
-    /* Separador vertical */
+
     nav.show-nav a:not(:last-child) {
         position: relative;
     }
     
-    /* Botón iniciar sesión dentro del menú */
+    
     nav.show-nav a.login-button {
         margin: 15px 25px;
         padding: 12px 20px;
@@ -1284,7 +1375,7 @@ nav a:nth-child(4)::before {
         border: none;
     }
     
-    /* Si tienes un botón de iniciar sesión separado, ocúltalo cuando se muestra el menú */
+   
     .login-button:not(nav .login-button) {
         display: inline-block;
         position: absolute;
