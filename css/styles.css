@@ -269,3 +269,533 @@ nav a:nth-child(4)::before {
 .cta-main:hover {
     background-color: #2A1905;
 }
+
+
+
+
+
+
+
+
+
+
+
+/* =================== */
+/*      RESPONSIVE      */
+/* =================== */
+
+/* HEADER - MENU TOGGLE */
+@media (max-width: 992px) {
+    nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+/* Ajuste de separación de las opciones en nav cuando responsive */
+@media (max-width: 992px) {
+    nav a {
+        padding: 8px 30px; 
+    }
+}
+
+@media (max-width: 768px) {
+    nav a {
+        padding: 8px 20px; 
+        font-size: 18px;
+    }
+}
+
+/* MAIN BANNER */
+@media (max-width: 768px) {
+    .main-banner {
+        padding-top: 100px;
+        height: auto;
+    }
+
+    .banner-background {
+        width: 100%;
+        height: 400px;
+        position: relative;
+    }
+
+    .banner-background img {
+        height: 100%;
+    }
+
+    .banner-content {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        padding: 40px 20px;
+        text-align: center;
+        max-width: 100%;
+        color: #000;
+    }
+
+    .banner-content h1 {
+        font-size: 32px;
+    }
+
+    .banner-content p {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    .cta-main {
+        margin-top: 30px;
+    }
+
+    .banner-accent {
+        display: none; 
+    }
+}
+
+/* BENEFITS SECTION */
+@media (max-width: 768px) {
+    .benefits-background {
+        display: none; 
+    }
+
+    .benefits-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .benefit-card {
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+/* COMPANY SECTION */
+@media (max-width: 992px) {
+    .company-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .company-gallery,
+    .company-content {
+        width: 100%;
+    }
+
+    .company-gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        gap: 20px;
+    }
+
+    .gallery-row {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .fabric-sample,
+    .sewing-equipment {
+        height: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .company-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .company-gallery,
+    .company-content {
+      width: 100%;
+    }
+  
+    .company-section {
+      padding: 80px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .company-heading {
+        font-size: 28px;
+    }
+
+    .company-intro,
+    .company-values p {
+        font-size: 20px;
+    }
+}
+
+/* PRICING SECTION */
+@media (max-width: 992px) {
+    .pricing-container {
+        gap: 20px;
+    }
+
+    .price-card {
+        width: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .price-card {
+        width: 90%;
+        max-width: 350px;
+        margin-bottom: 30px;
+    }
+
+    .pricing-heading {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+/* FAQ SECTION */
+@media (max-width: 768px) {
+    .faq-section {
+        padding: 2rem 1rem;
+    }
+
+    .faq-section h2 {
+        font-size: 28px;
+        margin-bottom: 2rem;
+    }
+
+    .faq-question h3 {
+        font-size: 16px;
+    }
+
+    .faq-answer {
+        font-size: 14px;
+    }
+}
+
+/* CONTACT SECTION */
+@media (max-width: 992px) {
+    .contact-wrapper {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .form-wrapper {
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+}
+
+/* FOOTER SECTION */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-brand img {
+        height: 100px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* Modificaciones para responsive */
+@media (max-width: 992px) {
+    .contact-wrapper {
+      justify-content: center;
+    }
+    
+    .form-wrapper {
+      margin-right: 0;
+      width: 90%;
+      max-width: 550px;
+    }
+}
+
+/* Para pantallas medianas (tablets) */
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    /* Ajustes ya mencionados anteriormente */
+    .main-banner {
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .banner-accent {
+        clip-path: polygon(40% -20%, 200% -100%, 100% 100%, 17% 10%);
+        opacity: 0.85;
+    }
+    
+    /* Ajuste para menú */
+    nav a {
+        padding: 8px 15px;
+        font-size: 16px;
+    }
+}
+
+/* Para móviles grandes (como iPhone Plus, Galaxy S) */
+@media screen and (max-width: 767px) and (min-width: 576px) {
+    /* Simplificar layout para móviles grandes */
+    .banner-accent {
+        clip-path: polygon(40% -20%, 200% -100%, 100% 100%, 0% 20%);
+        opacity: 0.8;
+    }
+    
+    .main-banner {
+        height: auto;
+        padding-top: 80px;
+    }
+    
+    .banner-background {
+        height: 100%;
+        position: absolute;
+    }
+    
+    .banner-content {
+        padding: 30px 20px;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        background-color: rgba(255, 255, 255, 0.2);
+        margin-top: 120px;
+        max-width: 90%;
+        margin: 120px auto 0;
+    }
+    
+    .banner-content h1 {
+        font-size: 32px;
+    }
+    
+    /* Menú hamburguesa */
+    .mobile-header {
+        padding: 10px 15px;
+    }
+    
+    .logo img {
+        height: 90px;
+    }
+}
+
+/* Para móviles pequeños */
+@media screen and (max-width: 575px) {
+    /* Layout muy simplificado para pantallas muy pequeñas */
+    .banner-accent {
+        display: none; /* Quitar completamente en pantallas muy pequeñas */
+    }
+    
+    .main-banner {
+        height: auto;
+        padding-top: 70px;
+    }
+    
+    .banner-background {
+        position: relative;
+        height: 200px;
+        width: 100%;
+    }
+    
+    .banner-background img {
+        object-position: center top;
+    }
+    
+    .banner-content {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        background-color: #fff;
+        color: #2A1905;
+        padding: 20px 15px;
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    .banner-content h1 {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+    
+    .banner-content p {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    
+    .cta-main {
+        margin-top: 30px;
+        display: block;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    
+    /* Ajustes de header para móviles muy pequeños */
+    .logo img {
+        height: 70px;
+    }
+    
+    .mobile-header {
+        padding: 10px;
+    }
+    
+    /* Menú ajustado para pantallas pequeñas */
+    .show-nav {
+        width: 100%;
+        right: 0;
+        top: 60px;
+        border-radius: 0;
+    }
+    
+    .show-nav a {
+        text-align: center;
+        padding: 15px 0;
+        font-size: 16px;
+    }
+}
+
+/* Ajuste extremadamente pequeño (iPhone SE o similar) */
+@media screen and (max-width: 375px) {
+    .banner-content h1 {
+        font-size: 24px;
+    }
+    
+    .logo img {
+        height: 60px;
+    }
+    
+    .cta-main {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+}
+
+
+/* Estilos mejorados para el menú hamburguesa y desplegable */
+@media (max-width: 992px) {
+    /* Header con fondo marrón */
+    header {
+        background-color: #2A1905;
+        padding: 12px 20px;
+    }
+    
+    /* Menú hamburguesa */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 28px;
+        height: 20px;
+        cursor: pointer;
+        z-index: 100;
+    }
+    
+    .menu-toggle span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+    
+    /* Estilo del menú desplegable - mejorado */
+    nav.show-nav {
+        display: flex;
+        flex-direction: column;
+        background-color: #2A1905;
+        position: absolute;
+        top: 85px; /* Ajustar según la altura de tu header */
+        left: 0;
+        width: 100%;
+        padding: 0;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        animation: fadeInDown 0.3s ease forwards;
+    }
+    
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    nav.show-nav a {
+        color: white;
+        text-decoration: none;
+        padding: 15px 25px;
+        text-align: left;
+        font-size: 16px;
+        font-weight: 500;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+        transition: background-color 0.2s ease;
+    }
+    
+    nav.show-nav a:hover {
+        background-color: rgba(255,255,255,0.05);
+    }
+    
+    /* Separador vertical */
+    nav.show-nav a:not(:last-child) {
+        position: relative;
+    }
+    
+    /* Botón iniciar sesión dentro del menú */
+    nav.show-nav a.login-button {
+        margin: 15px 25px;
+        padding: 12px 20px;
+        background-color: white;
+        color: #2A1905;
+        border-radius: 4px;
+        text-align: center;
+        font-weight: bold;
+        border: none;
+    }
+    
+    /* Si tienes un botón de iniciar sesión separado, ocúltalo cuando se muestra el menú */
+    .login-button:not(nav .login-button) {
+        display: inline-block;
+        position: absolute;
+        right: 60px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 8px 15px;
+        background-color: white;
+        color: #2A1905;
+        border-radius: 4px;
+        font-weight: bold;
+        text-decoration: none;
+        z-index: 100;
+    }
+}
+
+/* Para dispositivos muy pequeños */
+@media (max-width: 375px) {
+    nav.show-nav a {
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+    
+    .login-button:not(nav .login-button) {
+        padding: 6px 12px;
+        font-size: 13px;
+        right: 50px;
+    }
+}
