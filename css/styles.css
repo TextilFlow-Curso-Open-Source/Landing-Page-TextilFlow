@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: 'Lato', sans-serif; /* Aplicar Lato como fuente base para todo el texto */
+}
+
+/* Aplicar Manrope a todos los títulos */
+h1, h2, h3, h4, h5, h6,
+.section-heading, 
+.company-heading, 
+.pricing-heading,
+.plan-name {
+    font-family: 'Manrope', sans-serif;
+}
+
+
+.company-heading,
+.pricing-heading,
+.faq-section h2,
+.contact-section h2 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+}
+
+/* Para botones y elementos de interacción */
+.submit-button,
+.toggle-icon,
+.price-card .plan-name,
+.price-card .plan-cost {
+    font-family: 'Manrope', sans-serif;
+}
+
+/* Main Banner (Hero Section) */
+.main-banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+/* Polígono marrón */
+.banner-accent {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2A1905;
+    clip-path: polygon(40% -20%, 200% -100%, 80% 80%, 17% 10%);
+    z-index: 1;
+}
+
+.main-banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    overflow: hidden;
+    padding-top: 130px; 
+}
+
+.banner-background {
+    width: 95%;
+    height: 120%;
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.banner-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: white;
+    max-width: 700px;
+    max-height: 1000px;
+    z-index: 10;
+}
+
+.banner-content h1 {
+    margin-top: 100px;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700; /* Peso adecuado para Manrope en títulos grandes */
+    line-height: normal;
+}
+
+.text-highlight {
+    color: #2A1905;
+}
+
+.banner-content p {
+    font-size: 25px;
+    font-weight: 300;
+    line-height: normal;
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
+
+.cta-main {
+    margin-top: 100px;
+    display: inline-block;
+    background-color: #2A1905;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+    font-family: 'Manrope', sans-serif; /* Botones con Manrope */
+}
+
+.cta-main:hover {
+    background-color: #2A1905;
+}
