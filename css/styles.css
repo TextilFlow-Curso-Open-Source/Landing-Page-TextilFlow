@@ -406,7 +406,181 @@ nav a:nth-child(4)::before {
 }
 
 
+/* Estilos para la sección de Company (Former BuildWise) */
+.company-section {
+    position: relative;
+    background-color: #f5f1ec;
+    padding: 80px;
+    width: 100%;
+    overflow: hidden; /* Importante para contener la animación */
+}
+  
+/* Contenedor para la animación de fondo */
+.company-background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none; /* Permite que los clicks pasen a través de la animación */
+ }
+  
+  /* Asegurarse de que el canvas ocupe todo el espacio */
+.company-background-animation canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
 
+.company-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.company-gallery {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    width: 40%;
+}
+
+/* Estilos personalizados para cada contenedor de imagen */
+.textile-machine {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    height: 330px;
+}
+  
+.brand-emblem {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    position: relative;
+    z-index: 2;
+    width: 200px;
+    height: 350px;
+}
+  
+.gallery-row {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 3fr 7fr;
+    height: 450px;
+}
+  
+.fabric-sample {
+    grid-column: 1 / 2;
+    height: 100%;
+    overflow: hidden;
+}
+  
+.sewing-equipment {
+    grid-column: 2 / 3;
+    height: 100%;
+    overflow: hidden;
+}
+
+.textile-machine img,
+.fabric-sample img,
+.sewing-equipment img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Estilos personalizados para cada imagen individual */
+.textile-machine img {
+    width: 100%;
+    height: 100%;
+}
+
+.fabric-sample img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center; 
+}
+
+.sewing-equipment img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center; 
+}
+
+/* Logo */
+.textile-logo {
+    background-color: #866C52;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+
+.textile-logo img {
+    position: absolute;
+    width: 110%; 
+    height: auto;
+    top: 53%; 
+    left: 55%; 
+    transform: translate(-50%, -50%);
+}
+
+/* Resto de los estilos */
+.company-content {
+    position: relative;
+    z-index: 2;
+    width: 60%;
+    padding: 20px 20px 20px 0;
+    /* Añadir un fondo semi-transparente si se desea más contraste con la animación */
+    background-color: rgba(245, 241, 236, 0.7);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.company-heading {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #2A1905;
+    line-height: 1.2;
+}
+  
+.company-intro {
+    font-size: 25px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #000;
+}
+  
+.company-values p {
+    font-size: 25px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    color: #000;
+}
+  
+.company-values strong {
+    font-weight: bold;
+    color: #2A1905;
+}
 
 
 
