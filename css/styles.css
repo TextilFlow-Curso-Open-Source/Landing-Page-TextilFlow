@@ -582,7 +582,91 @@ nav a:nth-child(4)::before {
     color: #2A1905;
 }
 
+/* Estilos para la sección de Pricing (Former Planes) */
+.pricing-section {
+    background-color: #866C52;
+    padding: 60px 20px;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
 
+.pricing-heading {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.price-card {
+    background-color: white;
+    color: black;
+    width: 300px;
+    height: 500px;
+    position: relative;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px #000;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
+}
+
+.plan-name {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.plan-cost {
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    color: #2A1905;
+}
+
+.plan-details {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.plan-details li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.plan-details li::before {
+    content: "•";
+    position: absolute;
+    left: 10px;
+    color: #352A21;
+}
+
+.card-accent {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 15%;
+    height: 15%;
+    background-color: transparent;
+    z-index: -1;
+}
 
 
 /* Estilos para la sección de Contacto */
