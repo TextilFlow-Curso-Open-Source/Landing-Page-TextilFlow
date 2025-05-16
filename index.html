@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TextilFlow - Digitaliza el control de calidad textil</title>
     <link rel="stylesheet" href="css/styles.css">
+     <script src="https://unpkg.com/i18next@21.6.3/dist/umd/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.3/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
+     <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js"></script>
+     
+    
 </head>
 <body>
   <header>
@@ -15,13 +20,17 @@
           <a href="#benefits">Producto</a>
           <a href="#company">Nosotros</a>
           <a href="#pricing">Planes</a>
-          <a href="#" class="register-button">Registrar</a>
-          <a href="#" class="login-button">Iniciar Sesión</a>
+          <a href="https://textilflow.web.app/register" class="register-button">Registrar</a>
+          <a href="https://textilflow.web.app/login" class="login-button">Iniciar Sesión</a>
         </nav>
         <div class="menu-toggle" id="menu-toggle">
           <span></span>
           <span></span>
           <span></span>
+        </div>
+         <div id="language-switcher">
+          <button data-language="es" onclick="changeLanguage('es')" class="active">ES</button>
+          <button data-language="en" onclick="changeLanguage('en')">EN</button>
         </div>
   </header>
 
@@ -36,7 +45,7 @@
             <h1>DIGITALIZA EL<br>
             <span class="text-highlight">CONTROL DE</span> CALIDAD TEXTIL</h1>
             <p>La plataforma colaborativa que asegura la trazabilidad de tus lotes de tela, optimiza tus procesos y reduce pérdidas en la cadena de suministro.</p>
-            <a href="#" class="cta-main">Conoce más</a>
+            <a href="#" id="read-more-btn" class="cta-main">Conoce más</a>
         </div>
   </section>
 
@@ -92,7 +101,7 @@
         </div>
         
         <div class="benefits-action">
-            <a href="#" class="demo-button">Ver cómo funciona</a>
+            <a href="#"  id="how-it-works-btn" class="demo-button">Ver cómo funciona</a>
         </div>
   </section>
   
@@ -118,7 +127,7 @@
             </div>
       </div>
           
-      <div class="company-content">
+      <div class= "company-content"  id="company">
             <h2 class="company-heading">QUIENES SOMOS</h2>
             
           <p class="company-intro">
@@ -209,7 +218,7 @@
         </div>
   </section>
 
-  <section class="contact-section">
+  <section id="contact"  class="contact-section">
     <div class="textile-canvas"></div>
     <div class="contact-wrapper">
         <div class="form-wrapper">
@@ -255,13 +264,18 @@
             <a href="https://instagram.com/textilflow" aria-label="Instagram" target="_blank">
                 <img src="img/instagram.png" alt="Instagram">
             </a>
-        </div>            
+        </div>  
+        </div>
+            <div id="language-switcher">
+          <button data-language="es" onclick="changeLanguage('es')" class="active">ES</button>
+          <button data-language="en" onclick="changeLanguage('en')">EN</button>
+        </div>          
     </div>
     <div class="copyright">
         <p>&copy; 2025 TextilFlow Todos los derechos reservados</p>
     </div>
   </footer>
-
+<script src="js/i18n.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
 <script src="js/grid-animation.js"></script>
 <script src="js\main.js"></script>
