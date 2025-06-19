@@ -66,7 +66,26 @@ $(document).ready(function () {
         formDescription: "Descripción",
         formSubmit: "Enviar",
 
-        copyright: "© 2025 TextilFlow Todos los derechos reservados"
+        copyright: "© 2025 TextilFlow Todos los derechos reservados",
+        formPaymentTitle: "Datos de Pago",
+        formPaymentNote: "Todos los campos son necesarios.",
+        formPlanType: "Tipo de plan",
+        formPaymentOption: "Opción de pago",
+        formCountry: "País",
+        formCardName: "Nombre del titular",
+        formCardNumber: "Número de tarjeta",
+        formExpiryMonth: "Mes",
+        formExpiryYear: "Año",
+        formCVV: "Código de seguridad (CVV)",
+        formPay: "Pagar Ahora",
+        formPlaceholderName: "Ej: Juan Pérez",
+        formPlaceholderCard: "1234 5678 9012 3456",
+        formPlaceholderCVV: "Ej: 123",
+        formCountryPlaceholder: "Seleccione su país",
+
+        subscribeButton: "Suscribirme",
+        paymentSuccess: "¡Pago exitoso! Gracias por tu suscripción."
+
       }
     },
     en: {
@@ -136,7 +155,27 @@ $(document).ready(function () {
         formDescription: "Description",
         formSubmit: "Submit",
 
-        copyright: "© 2025 TextilFlow All rights reserved"
+        copyright: "© 2025 TextilFlow All rights reserved",
+        formPaymentTitle: "Payment Details",
+        formPaymentNote: "All fields are required.",
+        formPlanType: "Plan type",
+        formPaymentOption: "Payment option",
+        formCountry: "Country",
+        formCardName: "Cardholder name",
+        formCardNumber: "Card number",
+        formExpiryMonth: "Month",
+        formExpiryYear: "Year",
+        formCVV: "Security code (CVV)",
+        formPay: "Pay Now",
+        formPlaceholderName: "e.g. John Smith",
+        formPlaceholderCard: "1234 5678 9012 3456",
+        formPlaceholderCVV: "e.g. 123",
+        formCountryPlaceholder: "Select your country",
+        subscribeButton: "Subscribe",
+        paymentSuccess: "Payment successful! Thank you for your subscription."
+
+
+        
       }
     }
   };
@@ -231,6 +270,35 @@ function updateContent() {
 
   // Footer
   $('.site-footer .copyright p').text(i18next.t('copyright'));
+    // Modal de Pago
+  $('#payment-modal h2').text(i18next.t('formPaymentTitle'));
+  $('#payment-modal p').text(i18next.t('formPaymentNote'));
+  $('label[for="plan-type"]').text(i18next.t('formPlanType'));
+  $('label[for="payment-option"]').text(i18next.t('formPaymentOption'));
+  $('label[for="country"]').text(i18next.t('formCountry'));
+  $('label[for="card-name"]').text(i18next.t('formCardName'));
+  $('label[for="card-number"]').text(i18next.t('formCardNumber'));
+  $('label[for="expiry-month"]').text(i18next.t('formExpiryMonth'));
+  $('label[for="expiry-year"]').text(i18next.t('formExpiryYear'));
+  $('label[for="cvv"]').text(i18next.t('formCVV'));
+
+  $('#card-name').attr('placeholder', i18next.t('formPlaceholderName'));
+  $('#card-number').attr('placeholder', i18next.t('formPlaceholderCard'));
+  $('#cvv').attr('placeholder', i18next.t('formPlaceholderCVV'));
+
+  $('#country option:first-child').text(i18next.t('formCountryPlaceholder'));
+
+  $('.checkout-form .submit-button').text(i18next.t('formPay'));
+
+  // Botones "Suscribirme"
+  $('.subscribe-button').text(i18next.t('subscribeButton'));
+
+
+
+
+
+
+
 }
 
 // Actualizar botón de idioma activo

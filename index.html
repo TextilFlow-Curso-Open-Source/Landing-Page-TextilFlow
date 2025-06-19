@@ -163,7 +163,9 @@
               <li>4 Reportes de calidad en PDF básicos</li>
             </ul>
             <div class="card-accent"></div>
-          </div>
+            <a href="#" class="subscribe-button" onclick="openModal('Plan Básico', 9.99); return false;">Suscribirme</a>
+
+        </div>
           
           <!-- Plan Corporativo -->
           <div class="price-card">
@@ -177,9 +179,13 @@
               <li>Fotos ilimitadas</li>
             </ul>
             <div class="card-accent"></div>
+            <a href="#" class="subscribe-button" onclick="openModal('Plan Corporativo', 49.99); return false;">Suscribirme</a>
+
+
           </div>
         </div>
   </section>
+
 
 
   <!-- Sección de Preguntas Frecuentes -->
@@ -275,9 +281,92 @@
         <p>&copy; 2025 TextilFlow Todos los derechos reservados</p>
     </div>
   </footer>
+  <div id="payment-modal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Datos de Pago</h2>
+    <p>Todos los campos son necesarios.</p>
+    
+    <form class="checkout-form" novalidate>
+  <label for="plan-type">Tipo de plan</label>
+  <input type="text" id="plan-type" disabled>
+
+  <label for="payment-option">Opción de pago</label>
+  <select id="payment-option">
+    <option value="mensual">Mensual - $9.99</option>
+    <option value="anual">Anual - $99.99</option>
+  </select>
+
+  <label for="country">País</label>
+  <select id="country" required>
+    <option value="">Seleccione su país</option>
+    <option>Perú</option>
+    <option>México</option>
+    <option>Argentina</option>
+    <option>Colombia</option>
+  </select>
+
+  <label for="card-name">Nombre del titular</label>
+  <input type="text" id="card-name" placeholder="Ej: Juan Pérez" required>
+
+  <div class="card-logos">
+    <img src="img/visa.png" alt="Visa">
+    <img src="img/mastercard.png" alt="MasterCard">
+  </div>
+
+  <label for="card-number">Número de tarjeta</label>
+  <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="16" pattern="\d{16}" required>
+
+  <div class="input-row">
+    <div class="input-group">
+      <label for="expiry-month">Mes</label>
+      <select id="expiry-month" required>
+        <option value="">Mes</option>
+        <option>01</option>
+        <option>02</option>
+        <option>03</option>
+        <option>04</option>
+        <option>05</option>
+        <option>06</option>
+        <option>07</option>
+        <option>08</option>
+        <option>09</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+      </select>
+    </div>
+    <div class="input-group">
+      <label for="expiry-year">Año</label>
+      <select id="expiry-year" required>
+        <option value="">Año</option>
+        <option>2025</option>
+        <option>2026</option>
+        <option>2027</option>
+        <option>2028</option>
+        <option>2029</option>
+        <option>2030</option>
+      </select>
+    </div>
+  </div>
+
+  <label for="cvv">Código de seguridad (CVV)</label>
+  <input type="text" id="cvv" placeholder="Ej: 123" maxlength="3" pattern="\d{3}" required>
+
+  <button type="submit" class="submit-button">Pagar Ahora</button>
+</form>
+
+  </div>
+</div>
+
+ 
+
+  
 <script src="js/i18n.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
 <script src="js/grid-animation.js"></script>
-<script src="js\main.js"></script>
+<script src="js\main.js"></script> 
+
+
 </body>
 </html>
