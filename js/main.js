@@ -247,13 +247,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
   const readMoreBtn = document.getElementById('read-more-btn');
-  const companySection = document.getElementById('company');
+  const videosSection = document.getElementById('videos');
 
-  if (readMoreBtn && companySection) {
+  if (readMoreBtn && videosSection) {
     readMoreBtn.addEventListener('click', function(e) {
       e.preventDefault();
       window.scrollTo({
-        top: companySection.offsetTop - 80, 
+        top: videosSection.offsetTop - 80, 
         behavior: 'smooth'
       });
     });
@@ -310,35 +310,34 @@ function openModal(plan, price) {
   const oldMessage = document.getElementById('success-message');
   if (oldMessage) oldMessage.remove();
 
-  // Asignar función al enviar el formulario
-  form.onsubmit = function (e) {
-    e.preventDefault();
+ 
+form.onsubmit = function (e) {
+  e.preventDefault();
 
-    payButton.disabled = true;
-    payButton.innerText = 'Procesando...';
+  payButton.disabled = true;
+  payButton.innerText = 'Procesando...';
 
+  setTimeout(() => {
+    // Mostrar mensaje de éxito dentro del formulario
+    const success = document.createElement('p');
+    success.id = 'success-message';
+    success.innerText = i18next.t('paymentSuccess'); 
+    success.style.color = '#2A1905';
+    success.style.fontWeight = 'bold';
+    success.style.marginTop = '20px';
+    form.appendChild(success);
+
+    // Resetear formulario
+    form.reset();
+    payButton.disabled = false;
+    payButton.innerText = 'Pagar Ahora';
+
+    // Redirigir al login después de 2 segundos
     setTimeout(() => {
-      // Mostrar mensaje de éxito dentro del formulario
-      const success = document.createElement('p');
-      success.id = 'success-message';
-      success.innerText = i18next.t('paymentSuccess'); 
-      success.style.color = '#2A1905';
-      success.style.fontWeight = 'bold';
-      success.style.marginTop = '20px';
-      form.appendChild(success);
-
-      // Resetear formulario
-      form.reset();
-      payButton.disabled = false;
-      payButton.innerText = 'Pagar Ahora';
-
-      // Cerrar el modal luego de 2 segundos
-      setTimeout(() => {
-        closeModal();
-        success.remove();
-      }, 2000);
-    }, 1500);
-  };
+      window.location.href = 'https://textilflow.web.app/login';
+    }, 2000);
+  }, 1500);
+};
 }
 
 

@@ -4,6 +4,7 @@ $(document).ready(function () {
       translation: {
         navProduct: "Producto",
         navAbout: "Nosotros",
+        navVideos: "Videos", // ✅ AGREGADO
         navPlans: "Planes",
         navRegister: "Registrar",
         navLogin: "Iniciar Sesión",
@@ -84,18 +85,25 @@ $(document).ready(function () {
         formCountryPlaceholder: "Seleccione su país",
 
         subscribeButton: "Suscribirme",
-        paymentSuccess: "¡Pago exitoso! Gracias por tu suscripción."
+        paymentSuccess: "¡Pago exitoso! Gracias por tu suscripción.",
 
+        // ✅ Nueva sección de videos
+        videosTitle: "CONOCE MÁS SOBRE TEXTILFLOW",
+        video1Title: "Conoce Nuestro Producto",
+        video1Desc: "Descubre cómo TextilFlow revoluciona el control de calidad textil con tecnología innovadora y procesos optimizados.",
+        video2Title: "Conoce Nuestro Equipo",
+        video2Desc: "Conoce al equipo de estudiantes de la UPC comprometidos con transformar la industria textil a través de la digitalización."
       }
     },
     en: {
       translation: {
         navProduct: "Product",
         navAbout: "About Us",
+        navVideos: "Videos", // ✅ AGREGADO
         navPlans: "Plans",
         navRegister: "Register",
         navLogin: "Login",
-        // Hero Section
+
         heroTitle: "DIGITIZE<br><span class='text-highlight'>TEXTILE</span> QUALITY CONTROL",
         heroDesc: "The collaborative platform that ensures traceability of your fabric batches, optimizes your processes, and reduces losses in the supply chain.",
         heroButton: "Learn more",
@@ -172,148 +180,155 @@ $(document).ready(function () {
         formPlaceholderCVV: "e.g. 123",
         formCountryPlaceholder: "Select your country",
         subscribeButton: "Subscribe",
-        paymentSuccess: "Payment successful! Thank you for your subscription."
+        paymentSuccess: "Payment successful! Thank you for your subscription.",
 
-
-        
+        // ✅ Nueva sección de videos
+        videosTitle: "LEARN MORE ABOUT TEXTILFLOW",
+        video1Title: "Meet Our Product",
+        video1Desc: "Discover how TextilFlow revolutionizes textile quality control with innovative technology and optimized processes.",
+        video2Title: "Meet Our Team",
+        video2Desc: "Meet the team of UPC students committed to transforming the textile industry through digitalization."
       }
     }
   };
 
-   // Initialize i18next
-    i18next
-      .use(i18nextBrowserLanguageDetector)
-      .init({
-        debug: false,
-        fallbackLng: 'en',
-        resources: resources
-      }, function(err, t) {
-        updateContent();
-        updateActiveLanguageButton(i18next.language);
-      });
-function updateContent() {
-  // Navegación
-  $('nav a:nth-child(1)').text(i18next.t('navProduct'));
-  $('nav a:nth-child(2)').text(i18next.t('navAbout'));
-  $('nav a:nth-child(3)').text(i18next.t('navPlans'));
-  $('nav a.register-button').text(i18next.t('navRegister'));
-  $('nav a.login-button').text(i18next.t('navLogin'));
+  // Initialize i18next
+  i18next
+    .use(i18nextBrowserLanguageDetector)
+    .init({
+      debug: false,
+      fallbackLng: 'en',
+      resources: resources
+    }, function(err, t) {
+      updateContent();
+      updateActiveLanguageButton(i18next.language);
+    });
 
-  // Hero Section
-  $('.banner-content h1').html(i18next.t('heroTitle'));
-  $('.banner-content p').text(i18next.t('heroDesc'));
-  $('.cta-main').text(i18next.t('heroButton'));
+  function updateContent() {
+    // Navegación
+    $('nav a:nth-child(1)').text(i18next.t('navProduct'));
+    $('nav a:nth-child(2)').text(i18next.t('navAbout'));
+    $('nav a:nth-child(3)').text(i18next.t('navVideos')); // ✅ AGREGADO
+    $('nav a:nth-child(4)').text(i18next.t('navPlans')); // ✅ CORREGIDO
+    $('nav a.register-button').text(i18next.t('navRegister'));
+    $('nav a.login-button').text(i18next.t('navLogin'));
 
-  // Benefits Section
-  $('.benefits-section h2').text(i18next.t('benefitsTitle'));
+    // Hero Section
+    $('.banner-content h1').html(i18next.t('heroTitle'));
+    $('.banner-content p').text(i18next.t('heroDesc'));
+    $('.cta-main').text(i18next.t('heroButton'));
 
-  $('.benefit-card:nth-child(1) h3').text(i18next.t('benefit1Title'));
-  $('.benefit-card:nth-child(1) li:nth-child(1)').text(i18next.t('benefit1Item1'));
-  $('.benefit-card:nth-child(1) li:nth-child(2)').text(i18next.t('benefit1Item2'));
-  $('.benefit-card:nth-child(1) li:nth-child(3)').text(i18next.t('benefit1Item3'));
-  $('.benefit-card:nth-child(1) li:nth-child(4)').text(i18next.t('benefit1Item4'));
+    // Benefits Section
+    $('.benefits-section h2').text(i18next.t('benefitsTitle'));
 
-  $('.benefit-card:nth-child(2) h3').text(i18next.t('benefit2Title'));
-  $('.benefit-card:nth-child(2) li:nth-child(1)').text(i18next.t('benefit2Item1'));
-  $('.benefit-card:nth-child(2) li:nth-child(2)').text(i18next.t('benefit2Item2'));
-  $('.benefit-card:nth-child(2) li:nth-child(3)').text(i18next.t('benefit2Item3'));
+    $('.benefit-card:nth-child(1) h3').text(i18next.t('benefit1Title'));
+    $('.benefit-card:nth-child(1) li:nth-child(1)').text(i18next.t('benefit1Item1'));
+    $('.benefit-card:nth-child(1) li:nth-child(2)').text(i18next.t('benefit1Item2'));
+    $('.benefit-card:nth-child(1) li:nth-child(3)').text(i18next.t('benefit1Item3'));
+    $('.benefit-card:nth-child(1) li:nth-child(4)').text(i18next.t('benefit1Item4'));
 
-  $('.benefit-card:nth-child(3) h3').text(i18next.t('benefit3Title'));
-  $('.benefit-card:nth-child(3) li:nth-child(1)').text(i18next.t('benefit3Item1'));
-  $('.benefit-card:nth-child(3) li:nth-child(2)').text(i18next.t('benefit3Item2'));
-  $('.benefit-card:nth-child(3) li:nth-child(3)').text(i18next.t('benefit3Item3'));
+    $('.benefit-card:nth-child(2) h3').text(i18next.t('benefit2Title'));
+    $('.benefit-card:nth-child(2) li:nth-child(1)').text(i18next.t('benefit2Item1'));
+    $('.benefit-card:nth-child(2) li:nth-child(2)').text(i18next.t('benefit2Item2'));
+    $('.benefit-card:nth-child(2) li:nth-child(3)').text(i18next.t('benefit2Item3'));
 
-  $('.demo-button').text(i18next.t('benefitsButton'));
+    $('.benefit-card:nth-child(3) h3').text(i18next.t('benefit3Title'));
+    $('.benefit-card:nth-child(3) li:nth-child(1)').text(i18next.t('benefit3Item1'));
+    $('.benefit-card:nth-child(3) li:nth-child(2)').text(i18next.t('benefit3Item2'));
+    $('.benefit-card:nth-child(3) li:nth-child(3)').text(i18next.t('benefit3Item3'));
 
-  // Company Section
-  $('.company-heading').text(i18next.t('companyTitle'));
-  $('.company-intro').text(i18next.t('companyIntro'));
-  $('.company-values p:nth-child(1)').html('<strong>Misión:</strong> ' + i18next.t('mission'));
-  $('.company-values p:nth-child(2)').html('<strong>Visión:</strong> ' + i18next.t('vision'));
+    $('.demo-button').text(i18next.t('benefitsButton'));
 
-  // Plans
-  $('.pricing-heading').text(i18next.t('plansTitle'));
+    // Company Section
+    $('.company-heading').text(i18next.t('companyTitle'));
+    $('.company-intro').text(i18next.t('companyIntro'));
+    $('.company-values p:nth-child(1)').html('<strong>Misión:</strong> ' + i18next.t('mission'));
+    $('.company-values p:nth-child(2)').html('<strong>Visión:</strong> ' + i18next.t('vision'));
 
-  $('.price-card:nth-child(1) .plan-name').text(i18next.t('basicPlanTitle'));
-  $('.price-card:nth-child(1) .plan-cost').text(i18next.t('basicPlanPrice'));
-  $('.price-card:nth-child(1) li:nth-child(1)').text(i18next.t('basicPlanItem1'));
-  $('.price-card:nth-child(1) li:nth-child(2)').text(i18next.t('basicPlanItem2'));
-  $('.price-card:nth-child(1) li:nth-child(3)').text(i18next.t('basicPlanItem3'));
+    // Plans
+    $('.pricing-heading').text(i18next.t('plansTitle'));
 
-  $('.price-card:nth-child(2) .plan-name').text(i18next.t('corpPlanTitle'));
-  $('.price-card:nth-child(2) .plan-cost').text(i18next.t('corpPlanPrice'));
-  $('.price-card:nth-child(2) li:nth-child(1)').text(i18next.t('corpPlanItem1'));
-  $('.price-card:nth-child(2) li:nth-child(2)').text(i18next.t('corpPlanItem2'));
-  $('.price-card:nth-child(2) li:nth-child(3)').text(i18next.t('corpPlanItem3'));
-  $('.price-card:nth-child(2) li:nth-child(4)').text(i18next.t('corpPlanItem4'));
-  $('.price-card:nth-child(2) li:nth-child(5)').text(i18next.t('corpPlanItem5'));
+    $('.price-card:nth-child(1) .plan-name').text(i18next.t('basicPlanTitle'));
+    $('.price-card:nth-child(1) .plan-cost').text(i18next.t('basicPlanPrice'));
+    $('.price-card:nth-child(1) li:nth-child(1)').text(i18next.t('basicPlanItem1'));
+    $('.price-card:nth-child(1) li:nth-child(2)').text(i18next.t('basicPlanItem2'));
+    $('.price-card:nth-child(1) li:nth-child(3)').text(i18next.t('basicPlanItem3'));
 
-  // FAQs
-  $('.faq-section h2').text(i18next.t('faqTitle'));
-  $('.faq-item:nth-child(1) .faq-question h3').text(i18next.t('faq1Question'));
-  $('.faq-item:nth-child(1) .faq-answer p').text(i18next.t('faq1Answer'));
+    $('.price-card:nth-child(2) .plan-name').text(i18next.t('corpPlanTitle'));
+    $('.price-card:nth-child(2) .plan-cost').text(i18next.t('corpPlanPrice'));
+    $('.price-card:nth-child(2) li:nth-child(1)').text(i18next.t('corpPlanItem1'));
+    $('.price-card:nth-child(2) li:nth-child(2)').text(i18next.t('corpPlanItem2'));
+    $('.price-card:nth-child(2) li:nth-child(3)').text(i18next.t('corpPlanItem3'));
+    $('.price-card:nth-child(2) li:nth-child(4)').text(i18next.t('corpPlanItem4'));
+    $('.price-card:nth-child(2) li:nth-child(5)').text(i18next.t('corpPlanItem5'));
 
-  $('.faq-item:nth-child(2) .faq-question h3').text(i18next.t('faq2Question'));
-  $('.faq-item:nth-child(2) .faq-answer p').text(i18next.t('faq2Answer'));
+    // FAQs
+    $('.faq-section h2').text(i18next.t('faqTitle'));
+    $('.faq-item:nth-child(1) .faq-question h3').text(i18next.t('faq1Question'));
+    $('.faq-item:nth-child(1) .faq-answer p').text(i18next.t('faq1Answer'));
 
-  $('.faq-item:nth-child(3) .faq-question h3').text(i18next.t('faq3Question'));
-  $('.faq-item:nth-child(3) .faq-answer p').text(i18next.t('faq3Answer'));
+    $('.faq-item:nth-child(2) .faq-question h3').text(i18next.t('faq2Question'));
+    $('.faq-item:nth-child(2) .faq-answer p').text(i18next.t('faq2Answer'));
 
-  // Contacto
-  $('.contact-form-container h2, .form-wrapper h2').text(i18next.t('contactTitle'));
-  $('label[for="nombre"]').text(i18next.t('formName'));
-  $('label[for="apellido"]').text(i18next.t('formSurname'));
-  $('label[for="email"]').text(i18next.t('formEmail'));
-  $('label[for="direccion"]').text(i18next.t('formAddress'));
-  $('label[for="descripcion"]').text(i18next.t('formDescription'));
-  $('.submit-button').text(i18next.t('formSubmit'));
+    $('.faq-item:nth-child(3) .faq-question h3').text(i18next.t('faq3Question'));
+    $('.faq-item:nth-child(3) .faq-answer p').text(i18next.t('faq3Answer'));
 
-  // Footer
-  $('.site-footer .copyright p').text(i18next.t('copyright'));
+    // Videos Section ✅ AGREGADO
+    $('.videos-section h2').text(i18next.t('videosTitle'));
+    $('.video-card:nth-child(1) h3').text(i18next.t('video1Title'));
+    $('.video-card:nth-child(1) p').text(i18next.t('video1Desc'));
+    $('.video-card:nth-child(2) h3').text(i18next.t('video2Title'));
+    $('.video-card:nth-child(2) p').text(i18next.t('video2Desc'));
+
+    // Contacto
+    $('.contact-form-container h2, .form-wrapper h2').text(i18next.t('contactTitle'));
+    $('label[for="nombre"]').text(i18next.t('formName'));
+    $('label[for="apellido"]').text(i18next.t('formSurname'));
+    $('label[for="email"]').text(i18next.t('formEmail'));
+    $('label[for="direccion"]').text(i18next.t('formAddress'));
+    $('label[for="descripcion"]').text(i18next.t('formDescription'));
+    $('.submit-button').text(i18next.t('formSubmit'));
+
+    // Footer
+    $('.site-footer .copyright p').text(i18next.t('copyright'));
+    
     // Modal de Pago
-  $('#payment-modal h2').text(i18next.t('formPaymentTitle'));
-  $('#payment-modal p').text(i18next.t('formPaymentNote'));
-  $('label[for="plan-type"]').text(i18next.t('formPlanType'));
-  $('label[for="payment-option"]').text(i18next.t('formPaymentOption'));
-  $('label[for="country"]').text(i18next.t('formCountry'));
-  $('label[for="card-name"]').text(i18next.t('formCardName'));
-  $('label[for="card-number"]').text(i18next.t('formCardNumber'));
-  $('label[for="expiry-month"]').text(i18next.t('formExpiryMonth'));
-  $('label[for="expiry-year"]').text(i18next.t('formExpiryYear'));
-  $('label[for="cvv"]').text(i18next.t('formCVV'));
+    $('#payment-modal h2').text(i18next.t('formPaymentTitle'));
+    $('#payment-modal p').text(i18next.t('formPaymentNote'));
+    $('label[for="plan-type"]').text(i18next.t('formPlanType'));
+    $('label[for="payment-option"]').text(i18next.t('formPaymentOption'));
+    $('label[for="country"]').text(i18next.t('formCountry'));
+    $('label[for="card-name"]').text(i18next.t('formCardName'));
+    $('label[for="card-number"]').text(i18next.t('formCardNumber'));
+    $('label[for="expiry-month"]').text(i18next.t('formExpiryMonth'));
+    $('label[for="expiry-year"]').text(i18next.t('formExpiryYear'));
+    $('label[for="cvv"]').text(i18next.t('formCVV'));
 
-  $('#card-name').attr('placeholder', i18next.t('formPlaceholderName'));
-  $('#card-number').attr('placeholder', i18next.t('formPlaceholderCard'));
-  $('#cvv').attr('placeholder', i18next.t('formPlaceholderCVV'));
+    $('#card-name').attr('placeholder', i18next.t('formPlaceholderName'));
+    $('#card-number').attr('placeholder', i18next.t('formPlaceholderCard'));
+    $('#cvv').attr('placeholder', i18next.t('formPlaceholderCVV'));
 
-  $('#country option:first-child').text(i18next.t('formCountryPlaceholder'));
+    $('#country option:first-child').text(i18next.t('formCountryPlaceholder'));
 
-  $('.checkout-form .submit-button').text(i18next.t('formPay'));
+    $('.checkout-form .submit-button').text(i18next.t('formPay'));
 
-  // Botones "Suscribirme"
-  $('.subscribe-button').text(i18next.t('subscribeButton'));
+    // Botones "Suscribirme"
+    $('.subscribe-button').text(i18next.t('subscribeButton'));
+  }
 
+  // Actualizar botón de idioma activo
+  function updateActiveLanguageButton(language) {
+    $('#language-switcher button').removeClass('active');
+    $('#language-switcher button[data-language="' + language + '"]').addClass('active');
+  }
 
-
-
-
-
-
-}
-
-// Actualizar botón de idioma activo
-function updateActiveLanguageButton(language) {
-  $('#language-switcher button').removeClass('active');
-  $('#language-switcher button[data-language="' + language + '"]').addClass('active');
-}
-
-// Función global para cambiar de idioma
-window.changeLanguage = function (lng) {
-  i18next.changeLanguage(lng, function () {
-    updateContent();
-    updateActiveLanguageButton(lng);
-    localStorage.setItem('i18nextLng', lng);
-  });
-}
+  // Función global para cambiar de idioma
+  window.changeLanguage = function (lng) {
+    i18next.changeLanguage(lng, function () {
+      updateContent();
+      updateActiveLanguageButton(lng);
+      localStorage.setItem('i18nextLng', lng);
+    });
+  }
   
 });
