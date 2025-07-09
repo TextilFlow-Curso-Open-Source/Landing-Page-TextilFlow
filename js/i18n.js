@@ -50,6 +50,7 @@ $(document).ready(function () {
         corpPlanItem3: "Hasta 100 fotos mensuales",
         corpPlanItem4: "Reportes de calidad en PDF",
         corpPlanItem5: "Fotos ilimitadas",
+        corpPlanItem6: "Acceso a Chatbot de TextilFlow",
 
         faqTitle: "PREGUNTAS FRECUENTES",
         faq1Question: "¿Cómo funciona TextilFlow?",
@@ -146,6 +147,8 @@ $(document).ready(function () {
         corpPlanItem3: "Up to 100 photos per month",
         corpPlanItem4: "Quality reports in PDF",
         corpPlanItem5: "Unlimited photos",
+        corpPlanItem6: "TextilFlow's Chatbot access",
+
 
         faqTitle: "FREQUENTLY ASKED QUESTIONS",
         faq1Question: "How does TextilFlow work?",
