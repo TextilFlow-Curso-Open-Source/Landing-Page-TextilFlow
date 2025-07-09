@@ -264,6 +264,8 @@ $(document).ready(function () {
     $('.price-card:nth-child(2) li:nth-child(3)').text(i18next.t('corpPlanItem3'));
     $('.price-card:nth-child(2) li:nth-child(4)').text(i18next.t('corpPlanItem4'));
     $('.price-card:nth-child(2) li:nth-child(5)').text(i18next.t('corpPlanItem5'));
+    $('.price-card:nth-child(2) li:nth-child(5)').text(i18next.t('corpPlanItem6'));
+
 
     // FAQs
     $('.faq-section h2').text(i18next.t('faqTitle'));
